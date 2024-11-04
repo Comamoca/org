@@ -1,0 +1,77 @@
+#+TITLE: Emacsでorg-modeを使ってみる
+#+AUTHOR: Comamoca
+#+OPTIONS: toc:nil
+
+org-modeが気になったので導入してみる。
+
+** 自分のorg-modeの方針
+
+自分はorg-modeを主にメモ書きとかナレッジの構築に使いたいと考えているので、org-journalを導入している。
+テンプレ用途でorg-captureも導入しているけどまだ上手く使えてない。
+
+#+begin_src emacs-lisp
+  ;; org-mode
+  (leaf org
+    :ensure t
+    :hook
+    org-capture-before-finalize-hook
+    :config
+    (set-language-environment "Japanese")
+    (prefer-coding-system 'utf-8)
+    (set-default 'buffer-file-coding-system 'utf-8)
+    (setq org-directory (expand-file-name "~/.ghq/github.com/Comamoca/org"))
+    (setq org-default-notes-file "notes.org")
+    (setq diary-file-path (format-time-string "diary/%Y/%m-%d.org")) 
+    )  
+#+end_src
+
+org-captureはorgファイルに任意のテンプレートを挿入できる機能。
+下の設定だと以下の内容が書き込まれる。
+
+#+begin_src emacs-lisp
+    ;; org-capture
+    (setq org-capture-templates
+  	'(("d" "Diary" plain (file diary-file-path)
+  	 "** 今日やったこと\n\n** 明日以降やりたいこと")))
+#+end_src
+
+#+begin_src 
+  ** 今日やったこと
+
+
+  ** 明日以降やりたいこと
+#+end_src
+
+#+begin_src emacs-lisp
+    (setq diary-path (concat org-directory "/diary"))
+  
+    (setq org-publish-project-alist
+  	'(("Diary"
+  	   :base-directory "~/.ghq/github.com/Comamoca/org/diary"
+  	   :base-extension "org"  
+  	   :recursive t
+  	   :publishing-directory  "~/.ghq/github.com/Comamoca/org/dist"
+  	   :publishing-function org-html-publish-to-html
+  	   :include ("index.org")
+  	   :exclude ()
+  	   )))
+#+end_src
+
+
+#+begin_src emacs-lisp
+    (leaf org-journal
+      :ensure t
+      :hook
+      org-journal-after-header-create-hook
+      :config
+      (setq org-journal-time-format "")
+      (setq org-journal-time-prefix "")
+      (setq org-journal-dir (concat org-directory (format-time-string "/diary/%Y")))
+      (setq org-journal-file-format (format-time-string "%m-%d.org"))
+      (setq org-directory (expand-file-name "~/.ghq/github.com/Comamoca/org"))
+    
+      (add-hook 'org-journal-after-header-create-hook 'org-journal-date-format-func)
+    
+      (defun org-journal-date-format-func ()
+        (insert-file-contents (concat org-directory "/templates/diary.org"))))
+#+end_src

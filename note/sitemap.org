@@ -1,0 +1,4 @@
+#+TITLE: Sitemap for project Note
+
+- [[file:org-mode.org][Emacsでorg-modeを使ってみる]]
+- [[file:index.org][Note]]

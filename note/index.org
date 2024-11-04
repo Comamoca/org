@@ -1,0 +1,11 @@
+#+TITLE: Note
+#+AUTHOR: Comamoca
+#+OPTIONS: toc:nil
+
+
+試験的にorg-modeで書いているnoteです。
+org-modeで書いている都合上Emacsの内容が多くなるはずです。
+
+本家Noteは[[https://note.comamoca.dev/][こちら]]から見れます。
+
+[[./sitemap.org][サイトマップ]]
