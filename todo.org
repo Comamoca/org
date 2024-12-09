@@ -1,5 +1,8 @@
 * INBOX
 
+*** TODO biglooとakkuとnix
+
+
 * PROGRESS
 
 *** PENDING Gleam in JS land
