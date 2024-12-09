@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       b05d8e88-3fe3-4748-85ab-563dbd3b778a
+:END:
+#+title: deno
+
+V8とJavaScriptに基づいたJavaScript/TypeScriptランタイム。
+以下のような特徴がある。
+
+- URL importによる柔軟なパッケージの導入
+- セキュアなサンドボックス環境
+- linter, formatterなどall in oneなコマンドの提供
+
+https://deno.com/

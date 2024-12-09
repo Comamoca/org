@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       a1391d08-8017-4145-8596-03ed7cd19d07
+:END:
+#+title: steel
+
+RustのScheme実装
+
+Rustプログラムに組み込んで使うこともできる。
+なお実行速度はPythonと同等レベルなので注意。
+
+https://github.com/mattwparas/steel

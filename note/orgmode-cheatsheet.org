@@ -1,0 +1,15 @@
+#+TITLE: org-modeチートシート
+#+AUTHOR: Comamoca
+#+OPTIONS: toc:nil
+
+個人的によく使うorg-modeのkeymapとかを挙げていく。
+
+
+** コードブロックの作成
+
+#+begin_src org
+  ,#+begin_src org-syntax
+  ,#+end_src
+#+end_src
+
+src_{C-c C-,}

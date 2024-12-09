@@ -1,0 +1,83 @@
+アウトライン
+
+* GleamとJavaScript
+Gleamをjs targetで使う際のメリット。
+
+TSにないpattern matchやblock構文、use構文などが言語の標準として使える。
+** ランタイム
+*** Node.js
+最も広く使われているJavaScritp runtime。
+*** Deno
+セキュリティなどに重きを置いたランタイム。
+*** Bun
+高速なJSランタイム。
+*** WinterJS
+wasm runtimeであるwasmer上で動くランタイム。
+** ライブラリ
+*** gleam_javascript
+Promiseなど基本的なデータ型を定義しているライブラリ。
+Promiseの他にMapやArrayなどが定義されている。
+**** Promise
+*** gleam_fetch
+Fetch APIのGleamバインディング。
+
+promiseなど
+*** printh
+JavaScript APIのGleamバインディング。
+JavaScriptと一対一のコードを記述できるので、JSに慣れている人はこのライブラリを使うのが良いかもしれない。
+** ツール
+Gleamエコシステムで使えるツールについて解説する。
+** esgleam
+esbuildをGleamから使えるようにしたもの。
+同名のesbuildプラグインも存在するので注意。
+*** garnet
+拙作のシングルバイナリ生成ツール。
+現状DenoとBunを使用したシングルバイナリの生成をサポートしている。
+
+先述したesgleamを用いて実装されている。
+** FFI
+JSライブラリをGleamで使用する方法、逆にGleamで記述した関数をJSで利用する方法について解説する。
+** Gleamとバックエンド
+GleamのJavaScriptバックエンドでサーバを記述する。
+これにより、エッジランタイムでもGleamを使ってサーバを構築できる。
+
+*** サーバー
+この章ではDenoやCF Workersなどを使ってサーバを構築する方法を紹介する。
+**** glen
+JS runtimeでサーバを構築するためのフレームワーク。Wispをforkして作られていう。
+デフォルトではDenoで動くようになっているが、wrapperを書くことによって任意のランタイムで実行できる。
+だが、Node.jsのライブラリを使っているコードが含まれているため、esbuildなどでバンドルする際は注意が必要。
+その際は~conversation~というJSのRequest/ResponseオブジェクトとGleamのRequest/Responseを変換できるライブラリを利用してサーバを書く。
+**** CF Workers
+**** WinterJS@wasmer Edge
+実際に検証はしたけど、正直そんなに旨味を感じられていない...
+ページ数多かったら一番始めに削る。
+
+*** データベース
+バックエンドといえばデータベース。
+ただ、現状JS targetで動くGleamのデータベースクライアントが存在しないので、自身でFFIを記述していく必要がある。
+
+**** storail
+オンディスクにJSONファイルを生成して永続化するライブラリ。
+かなり手軽に使えるため、検証に良さそう。
+
+**** PostgreSQL
+cakeというクエリビルダが存在するので、それを用いてSQLクエリを構築していく。
+
+** Gleamとフロントエンド
+Gleamでフロントエンドを構築する方法の一つとして、Lustreを使ったフロントエンドの構築方法を紹介する。
+*** Lustre
+**** Elm アーキテクチャ
+**** 副作用
+Lustreではコンポーネントは基本的に純粋。しかし、それだと外部リクエストなどができない。
+
+副作用の説明も軽く入れた方良い？
+
+そこでLustreでは副作用はLustre runtimeが吸収する構造となっている。
+副作用の例としてfetchとdebouceを紹介する。
+***** fetch
+gleam_fetchをLustre上で使えるようにしたもの。
+***** debouce
+
+** GleamとTauri
+** OpenTelemetry

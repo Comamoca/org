@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       ef2bfd9d-d018-4494-9c95-25ccfab22c2c
+:END:
+#+title: peewee
+
+PythonのミニマルなORM
+
+https://kurozumi.github.io/peewee/
+

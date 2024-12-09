@@ -1,0 +1,94 @@
+* INBOX
+
+* PROGRESS
+
+*** PENDING Gleam in JS land
+
+* articles
+
+*** TODO リンクカード実装 ブログ
+*** TODO テンプレの運用方法 ブログ記事
+*** TODO nostrでLINE Notify APIを代用する
+*** TODO Vim駅伝 vim-gin
+*** TODO Gleam 1.5.0
+
+* important
+
+*** TODO ブログ バリデーション
+*** TODO quickrun PR
+*** TODO gin 記事 https://github.com/lambdalisue/vim-gin/blob/0d0fc6efa72a65bace3bd4ae1f76ad753006ca0d/denops%2Fgin%2Fproxy%2Feditor.ts#L20-L20 
+*** TODO 作業 アラーム
+*** TODO call/cc触る
+*** TODO 銀杏
+*** TODO 時事
+*** TODO issue: nixpkgs buildhaxelib
+*** TODO issue: gerbil mktemp
+
+* programs
+
+*** TODO ddskkのcapf(corfuを用いた補完)
+*** TODO 自宅サーバーに広告サーバを構築
+*** TODO ブログ バリデーション実装
+*** TODO Nixのhaxeサポートライブラリ
+*** TODO testing lsp with Gleam
+*** TODO todo開発基盤
+*** TODO Gleam スクリプト Deno wasm
+*** TODO atproto gistみたいなやつ
+*** TODO Scrapboxクローン
+*** TODO [skid] blazingly fast gerbil http server
+*** TODO shigre_ui
+*** TODO Gleam Rustler
+*** TODO 広告配信システム
+*** TODO denopsバッファースクリプトビルダ
+*** TODO LiveKitでライブ配信サーバー
+*** TODO parasitic ssg
+*** TODO GitHubのStarリストを共有できるサービス
+*** TODO Godot&VR SNS
+*** TODO luash
+*** TODO LINE 栄養管理bot
+
+* research
+
+** TODO OpenTelemetry
+** TODO CIEL(tani's fork)試す
+
+* future
+*** TODO ハトクラオンライン
+*** TODO gleam meetup
+*** TODO Gleam BlueCast
+*** TODO Nostrで同人誌売る
+*** TODO 持ってる本のDBを構築/D1で公開
+*** TODO NimblePublisher触る
+*** TODO esprima&escodegenでなんかやる
+*** TODO パソカタ好きで毎月集まるの会
+*** TODO 入門Gleam書く
+*** TODO ドッグフーディングしていることを示すバッジとサイトの作成・整備
+*** TODO GraalVMでCLIツール
+*** TODO GrralVM触る
+*** TODO Elm(ド級のリトライ)
+*** TODO OCamlでCLIツール作れないか研究
+*** TODO Scala触る
+*** TODO F#触る
+*** TODO Elixir Membraneでリアルタイム通信
+*** TODO Elixir リアルタイムゲームサーバー
+*** TODO Elixir libclusterとk8と分散処理
+
+** articles
+
+*** TODO 2つのエディタ、2つの世界
+*** TODO org-modeで人生を管理しよう
+*** TODO U149のみんなと学ぶプログラミング入門
+*** TODO 好きな技術を布教してみよう
+*** TODO アイドルマスターで学ぶデータベース設計
+*** TODO まちカドまぞくで学ぶHaskell入門
+*** TODO fp-goとergoで始める関数型Webアプリケーション入門
+*** TODO Astro使いのためのLume入門
+*** TODO 実践Lume
+*** TODO 言語を試し斬りしたい人のためのLisp実装入門
+*** TODO モダンなLispを書きたい人のためのClojure入門
+*** TODO denops布教記事(英語)
+*** TODO 型ガチガチPython with Erg
+
+
+* TRASH
+** DONE 配信 org

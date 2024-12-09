@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       05fbb09d-5d04-4aa3-93da-14fc01e29819
+:END:
+#+title: deno_runtime
+
+[[id:b05d8e88-3fe3-4748-85ab-563dbd3b778a][deno]]のJS処理系とOSインターフェースを持たせた部分。
+実質denoコマンドからCLIインターフェースを削ったものと考えても良さそう。
+
+これを使うとdenoをライブラリのように自身のプログラムに組込むことができる。
+[[https://zenn.dev/skanehira/articles/2022-11-20-rust-deno-node][Denoを使ってRustでNodeモジュールを使う]]
+
+https://github.com/denoland/deno/tree/main/runtime

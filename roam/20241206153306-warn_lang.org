@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       16e39262-8fae-47bc-9f90-7cb126ab56ba
+:END:
+#+title: warn-lang
+
+Luaのように組み込んで使えるプログラミング処理系。
+
+- Smalltalk likeなオブジェクト指向
+- クリーンなC99, C++98コードベース
+- byte baseで高速に実行可能
+- Fiberベースの非同期ランタイムを搭載
+
+構文はJavaに似ている。
+
+#+begin_src java
+  System.print("Hello, world!")
+
+class Wren {
+  flyTo(city) {
+    System.print("Flying to %(city)")
+  }
+}
+
+var adjectives = Fiber.new {
+  ["small", "clean", "fast"].each {|word| Fiber.yield(word) }
+}
+
+while (!adjectives.isDone) System.print(adjectives.call())
+#+end_src
+
+http://wren.io/

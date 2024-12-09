@@ -1,0 +1,5 @@
+* Gleam in JS land
+
+** 目的
+
+- GleamのJavaScriptエコシステムでの活用方法を解説する
