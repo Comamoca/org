@@ -1,6 +1,9 @@
 * INBOX
 
-*** TODO biglooとakkuとnix
+*** TODO chezとakkuとnix
+*** TODO bigloo
+*** chibi scheme C連携
+*** cl-async HTTP server
 
 
 * PROGRESS
