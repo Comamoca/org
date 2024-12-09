@@ -4,6 +4,7 @@
 *** TODO bigloo
 *** chibi scheme C連携
 *** cl-async HTTP server
+*** zagjs r2アップローダ
 
 
 * PROGRESS
