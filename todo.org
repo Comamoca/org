@@ -1,18 +1,19 @@
-* INBOX
+help:
+C-c C-t: 優先順位の変更
+C-c C-s: 期限を設定
+
+** INBOX
 
 *** TODO chezとakkuとnix
 *** TODO bigloo
 *** TODO chibi scheme C連携
-*** TODO cl-async HTTP server
-*** TODO zagjs r2アップローダ
-*** TODO Gleam Goバックエンド
 
 
-* PROGRESS
+** PROGRESS
 
 *** PENDING Gleam in JS land
 
-* articles
+** articles
 
 *** TODO リンクカード実装 ブログ
 *** TODO テンプレの運用方法 ブログ記事
@@ -20,7 +21,7 @@
 *** TODO Vim駅伝 vim-gin
 *** TODO Gleam 1.5.0
 
-* important
+** important
 
 *** TODO ブログ バリデーション
 *** TODO quickrun PR
@@ -32,8 +33,11 @@
 *** TODO issue: nixpkgs buildhaxelib
 *** TODO issue: gerbil mktemp
 
-* programs
+** programs
 
+*** TODO GleamでLispを実装する
+*** TODO cl-async HTTP server
+*** TODO zagjs r2アップローダ
 *** TODO ddskkのcapf(corfuを用いた補完)
 *** TODO 自宅サーバーに広告サーバを構築
 *** TODO ブログ バリデーション実装
@@ -55,12 +59,14 @@
 *** TODO luash
 *** TODO LINE 栄養管理bot
 
-* research
+** research
 
+** TODO Gleam Goバックエンド
 ** TODO OpenTelemetry
 ** TODO CIEL(tani's fork)試す
 
-* future
+** future
+
 *** TODO ハトクラオンライン
 *** TODO gleam meetup
 *** TODO Gleam BlueCast
@@ -98,5 +104,5 @@
 *** TODO 型ガチガチPython with Erg
 
 
-* TRASH
+** TRASH
 ** DONE 配信 org
