@@ -1,0 +1,111 @@
+
+#+NAME: sales_data
+| 商品         | 9 月 | 10月 | 11 月 | 12 月 | 合計 |
+|--------------+------+------+-------+-------+------|
+| ボールペン   |  213 |  341 |   195 |    80 |  829 |
+| シャープペン |  181 |  247 |   119 |    63 |  610 |
+| えんぴつ     |   32 |   78 |   121 |    30 |  261 |
+| 消しゴム     |   87 |  130 |   117 |    73 |  407 |
+| コンパス     |   16 |   13 |    28 |    10 |   67 |
+|--------------+------+------+-------+-------+------|
+| #ERROR       |  316 |  468 |   385 |   176 | 1345 |
+#+TBLFM: $6=$2+$3+$4+$5::@7=@3+@4+@5+@6
+
+
+場所 	記法 	例
+行 	@n 	@2 (2 行目)
+列 	$n 	$3 (3 列目)
+セル 	@m$n 	@2$3 (2 行目の 3 列目)
+
+#+NAME: my-shell
+#+begin_src nix
+  { pkgs ? import <nixpkgs> {} }:
+  pkgs.mkShell {
+    buildInputs = with pkgs; [
+      bash
+      cowsay
+      hello
+      hy
+      (pkgs.python312.withPackages (python-pkgs: [
+        python-pkgs.pandas
+        python-pkgs.requests
+      ]))
+      ruby
+    ];
+  }
+#+end_src
+
+#+RESULTS: my-shell
+: <LAMBDA>
+
+
+#+begin_src sh :nix-shell "my-shell"
+  # hello
+
+  # which hy
+  # which python
+  python -c "print(1 + 1)"
+  # cowsay
+#+end_src
+
+#+RESULTS:
+: 2
+
+:var data=sales_data
+
+#+begin_src python :nix-shell "my-shell"
+  1 + 1
+#+end_src
+
+#+RESULTS:
+: None
+
+#+begin_src hy :nix-shell "my-shell"
+  (print "hello")
+#+end_src
+
+#+RESULTS:
+: None
+
+#+begin_src python :nix-shell "my-shell" :var data=sales_data
+  data
+#+end_src
+
+#+RESULTS:
+: None
+
+
+#+begin_src ruby :nix-shell "my-shell" 
+  1 + 1
+#+end_src
+
+#+RESULTS:
+: 2
+
+#+begin_src ruby :var data=sales_data
+  data[2][2]
+#+end_src
+
+#+RESULTS:
+: 247
+
+
+#+begin_src emacs-lisp
+(setq debug-on-error t)
+#+end_src
+
+#+RESULTS:
+: t
+
+
+#+begin_src C
+ #include <stdio.h>
+ 
+ int main(int argc, char** argv){
+     printf("Hello World.\n");
+     return 0;
+ }
+#+end_src
+
+#+RESULTS:
+: Hello World.

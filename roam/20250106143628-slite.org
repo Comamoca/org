@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       357d2ff3-9632-41d8-8782-7d1dbee01760
+:END:
+#+title: slite
+
+Common Lisp版[[id:eec0b0e1-cf4e-4902-97c1-e1f4b636c32c][kaocha-runner]]。
+Common LispでEmacs上から[[id:fd6b0e10-2d8a-4875-8ec3-c2460156557f][fiveam]]と[[id:51b88606-009e-4760-af27-80e070a12a63][parachute]]のテストを実行できる。
+
+https://github.com/tdrhq/slite

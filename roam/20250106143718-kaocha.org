@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5c17de0d-3ad5-496b-be25-9a733240ee73
+:END:
+#+title: kaocha
+
+[[id:ee580d36-f947-40ab-b7d7-8f3cfbe3488e][clojure]]で動作するテストランナー。
+
+repo:
+https://github.com/lambdaisland/kaocha
+
+https://zenn.dev/uochan/articles/2021-12-20-kaocha

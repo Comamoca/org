@@ -1,0 +1,19 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /home/coma/.ghq/github.com/Comamoca/org/memo/common-lisp-memo.org
+
+
+* サポートする処理系を絞る
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-01-20 Mon 11:22
+:ARCHIVE_FILE: ~/.ghq/github.com/Comamoca/org/memo/common-lisp-memo.org
+:ARCHIVE_OLPATH: NixでCommon Lispの開発環境を整える/NixでCommon Lispの環境構築をする/使い方
+:ARCHIVE_CATEGORY: common-lisp-memo
+:END:
+
+flake.nixの以下の箇所を編集する。
+
+code:nix
+
+

@@ -3,7 +3,7 @@
 :END:
 #+title: steel
 
-RustのScheme実装
+Rustの[[id:ae7bed4c-e5d5-4e8f-82e4-c77603cce0f4][scheme]]実装。
 
 Rustプログラムに組み込んで使うこともできる。
 なお実行速度はPythonと同等レベルなので注意。

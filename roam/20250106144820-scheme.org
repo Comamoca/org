@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       ae7bed4c-e5d5-4e8f-82e4-c77603cce0f4
+:END:
+#+title: scheme
+
+Lispの方言。静的スコープや継続などが特徴。
+
+Common Lispの巨大な仕様に大して小さな仕様が特徴で、様々な処理系が作られている。
+
+
+主な処理系として
+
+- [[id:15243cc8-bd54-4d7e-9c03-b77ae3dc00fc][gauche]]
+- [[id:4eab5b9b-9935-4e94-b974-18fe6ffeab97][chicken]]
+
+がある。

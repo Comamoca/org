@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       4eab5b9b-9935-4e94-b974-18fe6ffeab97
+:END:
+#+title: chicken
+
+「実用的でポータブルな実装」を目指している。
+中間言語としてCを採用している。
+
+https://call-cc.org/
+
+なおchickenはNixを使うことでパッケージを宣言的に管理できる。
+
+https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=chickenPackages

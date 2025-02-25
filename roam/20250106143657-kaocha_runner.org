@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       eec0b0e1-cf4e-4902-97c1-e1f4b636c32c
+:END:
+#+title: kaocha-runner
+
+[[id:5c17de0d-3ad5-496b-be25-9a733240ee73][kaocha]]をEmacs上で実行するためのプラグイン。
+テスト駆動で開発する際にテストの実行と実装を行き来する手間が省けて便利。
+
+https://github.com/magnars/kaocha-runner.el

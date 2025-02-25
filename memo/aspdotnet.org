@@ -1,0 +1,118 @@
+* ASP.NET入門
+
+業務で使うことになりそうなので触っていく。(これ一回言ってみたかった...！)
+なおC#自体初めて。
+
+ASP.NETとASP.NET Coreの違いが分からない...
+
+ChatGPTに聞いたら。
+
+- ASP.NETはWindowsでしか動かない
+- ASP.NET Coreはクロスプラットフォームで動く
+
+との事なのでCoreの方を使っていく。
+
+MSのサイトだとASP.NETのページからCoreの方に誘導されたりと
+両者の差別化をあんまりしてなくて普通に誤解する。
+なんとかして欲しい。
+
+って旨を呟いたら詳しい方に色々教えてもらった。
+名称まわり複雑すぎるだろ...
+
+https://x.com/Comamoca_/status/1894337038981501304
+
+** 前提
+
+- Nixを使っている
+- 開発はEmacs
+
+** 環境構築
+
+devenvで適当にセットアップしていく。
+`dotnet`コマンドに全てが集約されているっぽいので、とりあえずそれだけインストールしてみる。
+
+LSPは[[https://github.com/razzmatazz/csharp-language-server][csharp-language-server]]を使う。
+
+
+`devenv.nix`はこんな感じ。
+
+#+begin_src nix
+  { pkgs, config, ... }:
+  {
+  
+    packages = with pkgs; [
+      nil
+      csharp-ls
+    ];
+  
+    languages.dotnet.enable = true;
+    languages.dotnet.package = pkgs.dotnet-sdk_9;
+  
+    enterShell = '''';
+  }
+#+end_src
+
+** プロジェクト作成
+
+`dotnet new list`でテンプレート一覧が見れる。
+
+#+begin_src shell
+  # 最小限のWeb APIプロジェクトが作成
+  dotnet new webapp --no-https
+
+  # アプリの実行
+  dotnet run 
+#+end_src
+
+[[/home/coma/.ghq/github.com/Comamoca/org/imgs/2025-02-25-190238.png]]
+
+こんな感じで表示されれば成功。
+
+** テンプレートについて
+
+dotnetはnewサブコマンドを使ってプロジェクトテンプレートを簡単に展開できる。
+使えるテンプレートは`dotnet new list`で見れる。
+
+ここではよく使われるテンプレートを列挙してみる。
+
+| テプレート名 | 概要                                          |
+|--------------+-----------------------------------------------|
+| web          | 空のWebアプリケーションテンプレート           |
+| mvc          | 基本的なMVC Webアプリケーションのテンプレート |
+| webapi       | Web API向けのテンプレート                     |
+| blazor       | Blazor向けのテンプレート                      |
+
+** ページを追加してみる
+
+ASP.NETのMVCではControllerクラスにメソッドを追加すると
+ルーティングが追加され、名前が対応しているViewを返す。
+
+(この機能の名前が知りたい)
+
+*** Controllerの追加
+
+まずはシンプルなページを追加してみる。
+
+`Controllers`から`HomeController.cs`を開く。
+
+Controllerクラスを継承した`HomeController`クラスが定義されているので、
+そのクラスに新たなメソッドを追加する。
+
+具体的にこんな感じになると思う。
+
+#+begin_src csharp-ts
+  public IActionResult Sub()
+  {
+      return View();
+  }
+#+end_src
+
+*** Viewの追加
+
+次に`Views/Home/`ディレクトリに`Sub.cshtml`というファイルを作成する。
+これはコントローラに追加したメソッドと同じ名前になる。
+
+
+** テスト
+
+ASP.NETはもちろんテストもサポートしている。

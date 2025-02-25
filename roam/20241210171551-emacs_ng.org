@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       b6a0cc2d-ac09-4a5e-9690-70edda96320a
+:END:
+#+title: emacs-ng
+
+Denoでemacsの拡張ができるもの。
+
+https://emacs-ng.github.io/emacs-ng/

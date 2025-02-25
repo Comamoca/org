@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       e787092a-50ec-4648-8437-16cb6a905b46
+:END:
+#+title: skkserv
+
+SKKの辞書の代わりに使用できるサーバー
+複数のSKK実装と辞書データを共有できるのがメリット
+
+- [[https://github.com/kuuote/skkeletonserv][skkeletonserv]]
+   Deno実装

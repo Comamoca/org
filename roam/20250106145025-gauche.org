@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       15243cc8-bd54-4d7e-9c03-b77ae3dc00fc
+:END:
+#+title: gauche
+
+インタプリタとしての使いやすさに重点を置いて開発されている処理系。
+
+多言語対応や他のC/C++プログラムからリンク可能など様々な特色がある。
+
+http://practical-scheme.net/gauche/index-j.html

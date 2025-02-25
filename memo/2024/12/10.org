@@ -1,7 +1,0 @@
-akku
-Schemeのパッケージマネージャ
-
-https://akkuscm.org/
-
-chezのパッケージを管理するのに使われるらしい。
-nixpkgsではakkupackagesという名前空間でパッケージを扱える。

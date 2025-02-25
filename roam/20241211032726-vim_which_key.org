@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       0c6b1cac-ddbd-4412-81b0-40b8761c1453
+:END:
+#+title: vim-which-key
+
+Vimのプラグイン。
+利用可能なキーバインドを画面に表示してくれる。
+
+イメージ的にはHydraに近い？
+
+https://github.com/liuchengxu/vim-which-key

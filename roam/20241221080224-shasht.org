@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       ac5347b3-b7b8-4fdd-94fa-5d27cc396a54
+:END:
+#+title: shasht
+#+filetags: :common lisp:
+
+[[id:2f4eb689-b4af-4df2-a65c-54d2aaa95661][common-lisp]]のJSONパーサ。JSONの生成もできる。
+
+特徴として、他のJSONライブラリと比較して全体的に速度が速いというものがある。
+とりあえずの選択肢としても良いのかもしれない。
+
+https://github.com/yitzchak/shasht

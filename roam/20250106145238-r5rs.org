@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       a8be4122-2876-45a2-bbf1-8ef957e81837
+:END:
+#+title: R5RS
+
+[[id:ae7bed4c-e5d5-4e8f-82e4-c77603cce0f4][scheme]]の仕様の一種。
+
+https://practical-scheme.net/wiliki/wiliki.cgi?R5RS

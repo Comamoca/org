@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       2f4eb689-b4af-4df2-a65c-54d2aaa95661
+:END:
+#+title: common-lisp
+
+Ansiで策定されたLisp方言。
+
+処理系として以下のものがある。
+
+- [[id:b7707959-fc53-4289-b44c-532abbe8ba71][sbcl]]
+- [[id:d48d2a6a-ec68-4d1c-beed-ba63ca394f15][clasp]]
+- [[id:bf9f2f04-3a53-4092-b6b5-c0d675fce0aa][ecl]]
+- [[id:71ad42af-c8ea-416e-9b61-dc7e6199761c][abcl]]

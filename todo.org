@@ -2,8 +2,15 @@ help:
 C-c C-t: 優先順位の変更
 C-c C-s: 期限を設定
 
-** INBOX
+** TODO INBOX
 
+*** TODO https://github.com/zonuexe/dig.el
+*** TODO https://github.com/zonuexe/rink.el
+
+*** TODO [[https://github.com/xyproto/algernon][algernon]]をNixパッケージにする
+*** TODO https://www.takeokunn.org/posts/fleeting/20250126114218-build_and_deploy_typst_using_nix/
+*** TODO https://llmstxt.org/
+*** TODO https://manateelazycat.github.io/2022/05/12/lsp-bridge/
 *** TODO chezとakkuとnix
 *** TODO bigloo
 *** TODO chibi scheme C連携

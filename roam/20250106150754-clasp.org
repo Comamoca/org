@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       d48d2a6a-ec68-4d1c-beed-ba63ca394f15
+:END:
+#+title: clasp
+
+https://clasp-developers.github.io/
+
+LLVMを用いている[[id:2f4eb689-b4af-4df2-a65c-54d2aaa95661][common-lisp]]処理系。
+
+C/C++との高い相互互換性がある。

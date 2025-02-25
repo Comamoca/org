@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       36a97601-d350-4fa2-9a3f-bd3522d98975
+:END:
+#+title: akku
+
+Schemeのパッケージマネージャ
+
+https://akkuscm.org/
+
+chezのパッケージを管理するのに使われるらしい。
+nixpkgsではakkupackagesという名前空間でパッケージを扱える。

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       51b88606-009e-4760-af27-80e070a12a63
+:END:
+#+title: parachute
+
+Common Lispのシンプルで拡張可能なテストフレームワーク。
+
+repo:
+https://github.com/Shinmera/parachute
+
+doc:
+https://shinmera.github.io/parachute/
+
+
+- [[id:fd6b0e10-2d8a-4875-8ec3-c2460156557f][fiveam]]
+- lisp-unit
+- prove
+
+との互換レイヤーを有しており、ゼロコストでの切り替えが可能。

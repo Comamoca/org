@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d6fd5dc5-b512-4116-a471-c8c5651cae5e
+:END:
+#+title: hono
+
+様々なJSランタイムで動作するWebフレームワーク。
+
+https://hono.dev/

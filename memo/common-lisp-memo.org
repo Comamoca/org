@@ -1,0 +1,97 @@
+* NixでCommon Lispの開発環境を整える
+
+** Nixで整えるメリット
+
+Common Lispの環境管理ツールは複数ある
+
+ asdf(ビルト担当)
+ quicklisp(パッケージマネージャ)
+ qlot(パッケージローカルなパッケージ管理)
+ roswell(処理系&ライブラリ管理)
+
+それぞれの特性を理解して使う必要があるので*めちゃくちゃややこしい*。
+けれどNixを使うとASDFとNixのみで環境構築ができる。
+
+また、先述したツールはCommon Lispのライブラリしか管理しないけど、
+NixならCのライブラリを含めた環境を用意に構築できる。
+
+Common Lispはライブラリが少ないゆえにCの資産を使いたくなる機会が多いけれど、
+Nixなら用意にCのライブラリを含めた環境を作れる。
+
+また、quicklispは**一ヶ月に一回しかリポジトリが更新されない**(ultralispというレジストリは毎日更新される)ので、
+最新のバージョンを使いたいなら`git clone`するしかないがNixなら`fetchFromGitHub`なり使ってfetchすれば良いので
+最新のライブラリを使用するコストが下がる。
+
+これは逆に自身のライブラリをNix(Flake)で提供すれば、**他者が自身のライブラリの最新版を用意に使える環境を提供できる**という事でもある。
+
+** NixでCommon Lispの環境構築をする
+
+現状[nix-common-lisp](https://github.com/tani/nix-common-lisp)を使うのがベスト。
+
+このテンプレートはとても良く出来ていて、
+
+ flake-partsベース
+ 複数処理系のサポート
+ テストの実行
+
+と言った特徴がある。
+
+*** 使い方
+
+**** 始め方
+
+ `git clone https://github.com/tani/nix-common-lisp`でリポジトリをcloneする。
+ rename.shを編集する。
+  `NEWNAME="fibonacci"`の`fibonacci`を任意の名前に書き換える。
+ `./rename.sh`を実行する。
+   これでプロジェクト名が書き換えられる。
+
+**** 提供しているコマンドの実行方法
+
+ `nix develop`で開発シェルを起動する。
+ `nix run .#test-sbcl`で[* sbclでのテスト]を実行できる。
+
+`sbcl`の箇所を各Lisp処理系に置き換えればそのLisp処理系でのテストを実行できる。
+
+例えば、cclでテストを実行したかったら`nix run .#test-ccl`となる。
+
+**** プロジェクトに依存を追加する
+
+flake.nixの
+
+#+begin_src nix
+ ## Dependencies
+ lispLibs = lisp: with lisp.pkgs; [ fiveam ];
+#+end_src
+となっている箇所にライブラリを記述していく。
+
+具体的には[https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query=sbclPackages sbclPackages]
+が指定できる。
+
+それ以外の依存は
+
+#+begin_src nix
+ ## Non-Lisp dependencies
+ nativeLibs = with pkgs; [ ];
+#+end_src
+
+
+で指定できる。
+
+**** サポートする処理系を絞る
+
+flake.nixの以下の箇所を編集する。
+
+#+begin_src nix
+ ## Supported Lisp implementations
+ lispImpls = [
+   "sbcl"
+   "clasp-common-lisp"
+   "abcl"
+   "ecl"
+   "ccl"
+   "mkcl"
+   "clisp"
+   "cmucl_binary"
+ ];
+#+end_src

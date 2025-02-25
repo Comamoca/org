@@ -1,0 +1,77 @@
+* Emacs Lisp Tips
+
+** JSONから値を楽に取りたい
+
+Emacs標準で入ってるlet-alistを使うとドットを使ってalistにアクセスできる。
+
+このマクロは名前の通りalistに対してしか使えない。
+json-parse-stringはデフォルトでhash tableを返すので、`:object-type 'alist`でalistとして出力するよう指定する必要がある。
+
+
+#+begin_src elisp
+  (let ((data (json-parse-string "{\"record\": {\"post\": {\"created_at\": \"2025-02-04\",\"content\": \"hello!\"}}}" :object-type 'alist)))
+    (let-alist data
+      (print .record.post.content) ;; hello!
+    )) 
+#+end_src
+
+#+RESULTS:
+: hello!
+
+** バッファに対して操作を行う
+
+| 動作     | 関数名            |
+|----------+-------------------|
+| 新規作成 | get-buffer-create |
+| 取得     | get-buffer        |
+| 挿入     | insert            |
+| 全消去   | erase-buffer      |
+| 削除     | kill-buffer       |
+
+with-current-bufferを使うと上記の動作をバッファ内で行える。
+以下は*tmp*バッファを作成してhello!を挿入するサンプル。
+
+#+begin_src emacs-lisp 
+  (with-current-buffer (get-buffer-create "*tmp*")
+    (insert "hello!"))
+#+end_src
+
+** HTTP Requestを行う
+
+#+begin_src emacs-lisp
+    (url-retrieve "https://hacker-news.firebaseio.com/v0/topstories.json" (lambda (resp)
+  		     (print resp)))
+#+end_src
+
+#+RESULTS:
+: #<buffer  *http hacker-news.firebaseio.com:443*-575846>
+
+** HTTP Requstを送る
+
+*** plz.el
+
+curlをバックエンドとして動作するライブラリ。
+同期的にリクエストを送る。直感的で使いやすい。
+
+#+begin_src emacs-lisp
+  (require 'plz)
+  (require 'ert)
+
+  (let ((data (plz 'get
+  	      "https://hacker-news.firebaseio.com/v0/topstories.json"
+  	      :as #'json-read))))
+#+end_src
+
+** Unit testする
+
+#+begin_src emacs-lisp
+  (defun add (a b)
+    (+ a b))
+
+  (ert-deftest test-hn-item-url ()
+    (should (=2
+      	   (add 1 1))))
+
+  ;; 以下のフォームを評価するとテストが実行される。
+  (ert-run-tests-interactively)
+#+end_src

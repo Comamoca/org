@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       71ad42af-c8ea-416e-9b61-dc7e6199761c
+:END:
+#+title: abcl
+
+Armed Bear Common Lisp
+
+JVM上で動作する[[id:2f4eb689-b4af-4df2-a65c-54d2aaa95661][common-lisp]]処理系。

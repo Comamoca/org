@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       713e0873-a667-43c0-a7b0-78fee651f7b0
+:END:
+#+title: oklch
+
+視覚的均一性のあるカラー指定ができるCSS関数。
+
+[[https://developer.mozilla.org/ja/docs/Web/CSS/color_value/oklch][MDN Docs]] [[https://blog.nasbi.jp/programming/frontend/css/good-looking-color-oklch/][参考]]

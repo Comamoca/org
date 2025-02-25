@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       5b8a0c0b-bd59-4714-a5d6-0803121e9e77
+:END:
+#+title: goatdb
+
+Deno上に構築された分散型データベース。
+リアルタイムなデータ更新などが行なえる。
+
+React Hooksを提供しているなど、フロントエンド向けの利用を想定していそう。
+
+https://goatdb.dev/

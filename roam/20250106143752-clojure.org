@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       ee580d36-f947-40ab-b7d7-8f3cfbe3488e
+:END:
+#+title: clojure
+
+https://clojure.org/
+
+JVMで動作するLisp処理系。
+Common LispともSchemeとも違う構文を持つ。
+
+高速な実装速度、Javaライブラリとの高い互換性があるため既存のJavaライブラリを使用したり、
+ClojureでJavaライブラリを書くことが可能。

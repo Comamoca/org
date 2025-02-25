@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       ab83e611-cc5e-43a2-a2eb-8aca0d39b17b
+:END:
+#+title: kafka
+
+ストリーミングに特化した分散データストア。
+
+主にリアルタイムデータを扱うサービスで使われているが、
+メッセージキューとしても使われる。
+
+kafkaのユースケース
+
+https://x.com/GuidesJava/status/1725418315063935042?t=tNFXwPBy2xGaX9W0X6sOUQ&s=19

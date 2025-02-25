@@ -1,0 +1,12 @@
+:PROPERTIES:
+:ID:       bf9f2f04-3a53-4092-b6b5-c0d675fce0aa
+:END:
+#+title: ecl
+
+Embeddable Common Lisp
+
+https://ecl.common-lisp.dev/
+
+Cへとコンパイルされる[[id:2f4eb689-b4af-4df2-a65c-54d2aaa95661][common-lisp]]処理系。
+
+ マイコンでの動作実績がある。

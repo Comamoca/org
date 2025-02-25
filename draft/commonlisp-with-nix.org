@@ -1,0 +1,12 @@
+(英語で書きたい)
+
+* NixでCommon Lispの開発環境を作るメリット
+roswell, quikclisp, adsf, qlot等を使い分ける必要がなくなる。(asdfさえ理解していれば良い)
+Cライブラリなどの依存もきれいに管理できる
+
+* テンプレートとしてnix-common-lispを紹介
+
+https://github.com/tani/nix-common-lisp
+
+
+実際の事例としてrssbridgeを紹介する

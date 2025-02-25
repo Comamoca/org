@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       fd6b0e10-2d8a-4875-8ec3-c2460156557f
+:END:
+#+title: fiveam
+
+Common Lispで(恐らく最も使われている)テストフレームワーク。
+プロパティベーステストができる機能がある。
+
+https://github.com/lispci/fiveam

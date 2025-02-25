@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       b7707959-fc53-4289-b44c-532abbe8ba71
+:END:
+#+title: sbcl
+
+[[id:2f4eb689-b4af-4df2-a65c-54d2aaa95661][common-lisp]]処理系の一種。
+
+高速な実行速度もあってデファクトスタンダードとなっている。
+
+https://www.sbcl.org/
