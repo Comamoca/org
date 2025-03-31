@@ -109,3 +109,10 @@
 
 #+RESULTS:
 : Hello World.
+
+
+#+begin_src ledger :cmdline bal
+  2015/03/30 .
+    Assets:Bank                             20,000
+    Equity:Opening Balanceis
+#+end_src
