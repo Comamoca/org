@@ -1,0 +1,2 @@
+(defun freeze ()
+  (interactive))
